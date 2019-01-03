@@ -1,0 +1,90 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Jan 03, 2019 at 06:14 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `testing`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_employee`
+--
+
+CREATE TABLE `tbl_employee` (
+  `id` int(11) NOT NULL,
+  `preacher_name` varchar(50) NOT NULL,
+  `sermon_title` varchar(250) NOT NULL,
+  `sermon_file` text NOT NULL,
+  `sermon_date` date DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_employee`
+--
+
+INSERT INTO `tbl_employee` (`id`, `preacher_name`, `sermon_title`, `sermon_file`, `sermon_date`) VALUES
+(1, 'Micheal Bruce', 'How to love God', '', '2019-05-29'),
+(5, 'Clara Gilliam', 'What is love', '', '2018-12-22'),
+(6, 'Robert L. Hoskins', 'Why you will always need God', '', '2018-12-09'),
+(7, 'Walter M. Watkins', 'What is God plane for you', '', '2018-12-31'),
+(8, 'Stanley L. Gomez', 'How to get out of your comfort zone\r\n', '', '2018-12-03'),
+(9, 'Erik C. Parker', 'Why saying Marry Christmas is bad according to the bible', '', '2018-12-12'),
+(11, 'Stephanie B. Boland', 'Why you should obey your parents', '', '2018-12-02'),
+(12, 'Donald P. Fitzgerald', 'God is everything', '', '2018-12-02'),
+(13, 'Angel Lewis', 'Why do people disobey God', '', '2018-12-16'),
+(14, 'Justin Dean', 'How to be a real man according to the bible', '', '2018-12-08'),
+(52, 'gokl', ';jl', 'wordpress-pco-api-master.zip', '2018-12-31'),
+(51, 'Christohpfer Homberg', 'How to be a missionary', 'Klopps Liverpool rockt Englands Boxing - Day_ Liverpool - Newcastle 4_0  Premier.mp3', '2018-12-31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_images`
+--
+
+CREATE TABLE `tbl_images` (
+  `id` int(11) NOT NULL,
+  `name` blob NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_employee`
+--
+ALTER TABLE `tbl_employee`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_images`
+--
+ALTER TABLE `tbl_images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_employee`
+--
+ALTER TABLE `tbl_employee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `tbl_images`
+--
+ALTER TABLE `tbl_images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
